@@ -1,0 +1,96 @@
+/*importing Roboto font from Google font library*/
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"); */
+
+.ContentModal__landscape {
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.ContentModal__portrait {
+  display: none; /*to hide portrait image*/
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.tagline {
+  padding-bottom: 10px;
+  align-self: center;
+}
+
+.ContentModal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+/*The ::-webkit-scrollbar CSS pseudo-element allows you to style the scrollbar of an element when it has scrollable overflow. Keep in mind that
+ this feature is non-standard and only works in WebKit-based browsers (such as Chrome, Edge, Opera, Safari, and iOS browsers)*/
+.ContentModal::-webkit-scrollbar {
+  display: none; /*to hide the scrollbar to be appear in modal*/
+}
+
+.ContentModal__about {
+  padding: 10px;
+  width: 95%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  justify-content: space-evenly;
+  font-weight: 300;
+}
+
+.ContentModal__title {
+  height: 12%;
+  font-size: 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ContentModal__description {
+  display: flex;
+  height: 40%;
+  overflow-y: scroll;
+  padding: 15px;
+  border-radius: 20px;
+  scrollbar-width: thin; /*For Firefox Broser, the scrollbar is of thin width*/
+  box-shadow: inset 0 0 5px #000000;
+  text-align: justify;
+}
+
+.ContentModal__description::-webkit-scrollbar {
+  display: none; /*to hide the scrollbar to be appear in description box for chrome and microsoft edge browser*/
+}
+
+/*If screen size is greater than and equal to 835px, then apply these css on elements*/
+@media (min-width: 835px) {
+  .ContentModal__landscape {
+    display: none; /*to hide landscape image*/
+  }
+  .ContentModal__portrait {
+    display: flex; /*to visible portrait image*/
+    width: 38%;
+  }
+  .ContentModal {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px 0;
+  }
+  .ContentModal__about {
+    width: 58%;
+    padding: 0;
+    height: 100%;
+  }
+  .ContentModal__title {
+    font-size: 3.5vw;
+    margin-top: 1vh;
+  }
+  .ContentModal__description {
+    font-size: 22px;
+  }
+}
