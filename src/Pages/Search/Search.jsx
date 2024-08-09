@@ -38,7 +38,7 @@ const Search = () => {
   };
 
   useEffect(() => {
-    window.scroll(0, 0); //scrolls the document to the top of window 
+    window.scroll(0, 0);
     fetchSearch();
     // eslint-disable-next-line
   }, [type, page]); //So, whenever we are changing the page, we are scrolling to the top
