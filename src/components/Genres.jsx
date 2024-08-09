@@ -14,7 +14,6 @@ const Genres = ({
   //handleAdd() function will add the clicked genres in selectedGenres state and remove it from genres state
 
   const handleAdd = (genre) => {
-    //Sending particular genre which is clicked to handleAdd() function
     //1)Adding selected genre in selecteGenres array
     setSelectedGenres([...selectedGenres, genre]);
     //2)Removing selected genres from genres array
