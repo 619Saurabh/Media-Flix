@@ -17,7 +17,7 @@ const Genres = ({
     //Sending particular genre which is clicked to handleAdd() function
     //1)Adding selected genre in selecteGenres array
     setSelectedGenres([...selectedGenres, genre]);
-    //2)Removing selected genres from genres array(previous array where it was stored)
+    //2)Removing selected genres from genres array
     setGenres(genres.filter((gen) => gen.id !== genre.id));
     setPage(1);
   };
@@ -87,4 +87,4 @@ const Genres = ({
 
 export default Genres;
 
-// Adding (eslint-disable-next-line) in useEffect() hook to avoid missing dependencies warning
+
